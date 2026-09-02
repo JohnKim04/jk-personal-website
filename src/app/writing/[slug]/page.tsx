@@ -24,8 +24,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    robots:
-      post.status === 'published' ? undefined : { follow: false, index: false },
+    robots: post.isPlaceholder ? { follow: false, index: false } : undefined,
   }
 }
 
@@ -44,21 +43,17 @@ export default async function WritingPostPage(props: {
       <p className="eyebrow">Writing / {getWritingMeta(post)}</p>
       <h1>{post.title}</h1>
       <p className="article-page__lede">{post.description}</p>
-      {post.status === 'published' ? (
-        <article className="article-page__body">
-          {post.body.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </article>
-      ) : (
-        <div className="article-page__placeholder">
-          <p className="metadata">Not published yet</p>
-          <p>
-            This route is ready for the first original article. No draft or
-            generated copy is being presented as final writing.
-          </p>
-        </div>
-      )}
+      {post.isPlaceholder ? (
+        <p className="article-page__notice">
+          Temporary generated example. It will be replaced with a reviewed
+          article before launch.
+        </p>
+      ) : null}
+      <article className="article-page__body">
+        {post.body.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </article>
       <Link href="/writing">Back to writing</Link>
     </PageContainer>
   )

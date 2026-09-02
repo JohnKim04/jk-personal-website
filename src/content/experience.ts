@@ -37,16 +37,16 @@ export const experienceTimeline = [
   {
     company: 'Coinbase',
     role: 'Software Engineer',
-    period: 'Current',
+    period: 'Jun 2026 - Present',
   },
   {
     company: 'Shopify',
     role: 'Software Engineering Intern',
-    period: 'Previous',
+    period: 'Sep 2025 - Apr 2026',
   },
   {
     company: 'Coinbase',
     role: 'Software Engineering Intern',
-    period: 'Previous',
+    period: 'Jun 2025 - Sep 2025',
   },
 ] as const

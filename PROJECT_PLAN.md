@@ -227,6 +227,8 @@ The foundation is stable enough to begin the content and refinement work in Stag
 
 ## Stage 4 — Build the core experience
 
+**Detailed checklist:** [Stage 4: Core Experience](STAGE_4_CORE_EXPERIENCE.md)
+
 **Goal:** Make the main visitor journey feel complete.
 
 **Work:**
