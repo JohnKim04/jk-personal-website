@@ -173,6 +173,8 @@ The site should present John as an engineer who ships meaningful systems and can
 
 ## Stage 3 — Create the technical foundation
 
+**Status:** Complete and audited
+
 **Detailed checklist:** [Stage 3: Technical Foundation](STAGE_3_TECHNICAL_FOUNDATION.md)
 
 **Goal:** Set up a clean project that is easy to change and safe to deploy.
@@ -187,7 +189,41 @@ The site should present John as an engineer who ships meaningful systems and can
 
 **Deliverable:** A working local site shell with reusable design foundations.
 
-**Checkpoint:** The project builds locally with no errors and works at common desktop and mobile widths.
+**Checkpoint:** The project builds locally with no errors and works at common desktop and mobile widths. **Complete for the foundation.**
+
+### Stage 3 completion audit
+
+The foundation is stable enough to begin the content and refinement work in Stage 4. It is captured in Git checkpoint `edb5658` (`Build Stage 3 site foundation`); the repository was clean immediately after that commit.
+
+**Confirmed working**
+
+- **Application and tooling:** Next.js 16, React 19, TypeScript, Tailwind CSS 4, pnpm, ESLint, Prettier, and strict type checking are installed and documented. `pnpm check` and `pnpm build` pass. Production builds deliberately use webpack because Turbopack's production helper process is not available on this machine.
+- **Visual foundation:** The warm off-white, ink, gray-rule, and deep-blue technical-editorial token system is implemented in one global style layer. Geist and Geist Mono are loaded locally through Next's font tooling; spacing, page-width, focus, selection, and reduced-motion defaults are centralized.
+- **Structure and routes:** The shared header, footer, skip link, main landmark, editorial primitives, Home, About, Writing, individual-writing route, 404, and recoverable error page exist. Home, About, and Writing navigation has been checked locally.
+- **Content boundary:** Identity, links, career highlights, and writing metadata live in typed content files rather than being repeated across page components. The résumé remains safely in Git-ignored `source-material/`; no raw résumé, headshot, employer screenshot, or secret is exposed through `public/`.
+- **Baseline accessibility and discoverability:** The pages use a logical heading hierarchy, descriptive link labels, visible keyboard focus, skip navigation that sends focus to the main landmark, and a reduced-motion safeguard. Page metadata, a generated social image, a generated `JK` icon, `robots.txt`, and a sitemap route are present.
+
+**Known non-blocking follow-ups**
+
+- **Real mobile/device review:** Desktop rendering and no-horizontal-overflow behavior were checked. The in-app browser's temporary mobile-viewport override did not take effect during the final audit, so Stage 5 or Stage 7 should include a manual review on a real phone or a working device emulator before launch.
+- **Final public content:** The headshot, personal narrative, one reviewed original article, and a web-safe downloadable résumé are intentionally still absent. They are the primary blockers to a content-complete launch, not technical defects.
+- **Metadata after domain selection:** `SITE_URL` must be set in the deployment environment once the production domain is chosen. Until then, the sitemap intentionally contains no public URLs and local social-image URLs resolve to localhost.
+- **Final accessibility/performance pass:** The basics are in place, but launch work should still include real-device keyboard/touch checks, automated or manual color-contrast review, image optimization after assets arrive, and production-browser testing. The recoverable error UI is implemented but has not been exercised by deliberately causing a runtime failure.
+- **Small cleanup decision:** The default Next SVG files remain in `public/` but are unused. Remove them during a later cleanup if they continue to be unused. `motion` is installed for planned restrained interactions but is not currently imported; keep it only if Stage 5 introduces a specific, justified motion treatment.
+
+**Decisions finalized in Stage 3**
+
+- Use typed local content files instead of MDX or a CMS for the first release. A reviewed post is published by changing the structured entry in `src/content/writing.ts`.
+- Use native semantic HTML for the current interaction surface. Do not add shadcn/ui or Radix unless a future interaction actually needs an accessible complex primitive.
+- Keep analytics, contact-form infrastructure, authentication, a database, a CMS, and a custom domain outside the current scope.
+- Keep the first release concise: selected impact and contact links stay on Home; About and Writing deepen the story only when approved content is ready.
+
+**Recommended next sequence**
+
+1. Stage 4: replace the narrative and writing placeholders with reviewed content, then confirm whether a web-safe résumé and headshot are ready.
+2. Stage 5: refine the content hierarchy and add final imagery or project evidence; remove unused starter assets and any dependency not justified by the final interaction design.
+3. Stage 6: run the launch-quality pass after final content and assets exist.
+4. Stage 7: push to GitHub, create a Vercel preview, configure `SITE_URL`, and perform the real mobile review before buying or connecting a domain.
 
 ## Stage 4 — Build the core experience
 
