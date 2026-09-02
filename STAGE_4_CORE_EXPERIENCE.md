@@ -22,7 +22,7 @@ Complete the sections below in order. The content-approval gate comes first beca
 
 **Purpose:** Establish a single approved source for the content that replaces every Stage 3 placeholder.
 
-**Status:** In progress. The private résumé has been reviewed for factual alignment, the public education status now reflects the confirmed June 2026 graduation, and the owner-approved About narrative is ready. The first Writing post still requires approval.
+**Status:** Complete. The private résumé has been reviewed for factual alignment, the public education status reflects the confirmed June 2026 graduation, and the owner-directed About narrative and first Writing post are published.
 
 ### Defaults recorded for this pass
 
@@ -101,7 +101,7 @@ Complete the sections below in order. The content-approval gate comes first beca
 
 **Purpose:** Demonstrate the site’s point of view with one genuine, fully reviewed piece rather than a generic content feed.
 
-**Status:** Implemented with a clearly labeled, no-indexed generated placeholder at John’s request. Replace it with a reviewed original article before Stage 4 sign-off or launch.
+**Status:** Complete. An owner-directed first-person article is published from the local typed-content source.
 
 **Work**
 
@@ -137,7 +137,7 @@ Complete the sections below in order. The content-approval gate comes first beca
 
 **Purpose:** Treat public content as release-critical and leave a stable baseline for visual refinement.
 
-**Status:** Verification complete; Stage 4 sign-off is blocked until the generated Writing placeholder is replaced with one reviewed original article. The feature branch `codex/stage-4-core-experience` holds the verified checkpoint.
+**Status:** Ready for PR review. The feature branch `codex/stage-4-core-experience` holds the verified checkpoint; complete the remaining real-device, text-zoom, and deliberate error-state checks before launch.
 
 **Work**
 

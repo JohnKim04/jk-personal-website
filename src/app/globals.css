@@ -395,15 +395,6 @@ a:hover {
   line-height: 1.6;
 }
 
-.article-page__notice {
-  max-width: var(--content-reading);
-  padding: var(--space-4);
-  margin: 0;
-  border-left: 2px solid var(--rule);
-  color: var(--ink-muted);
-  font-size: 0.95rem;
-}
-
 .home-hero__links {
   display: flex;
   flex-wrap: wrap;
@@ -645,10 +636,6 @@ a:hover {
 
   .about-page__grid {
     gap: var(--space-7);
-  }
-
-  .article-page__notice {
-    padding: var(--space-3) var(--space-4);
   }
 }
 
