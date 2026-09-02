@@ -1,0 +1,19 @@
+# Private source material. Publish only reviewed copies from public/ when needed.
+/source-material/
+
+# Local environment and secrets.
+.env
+.env.*
+!.env.example
+
+# macOS and editor files.
+.DS_Store
+.idea/
+.vscode/
+
+# Node.js and Next.js build output.
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
