@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import {
@@ -15,6 +16,12 @@ import {
   siteIdentity,
 } from '@/content/site'
 import { getWritingMeta, writingPosts } from '@/content/writing'
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default function Home() {
   const featuredPost = writingPosts[0]

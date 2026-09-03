@@ -4,10 +4,37 @@ import Link from 'next/link'
 import { PageContainer } from '@/components/editorial'
 import { getWritingMeta, writingPosts } from '@/content/writing'
 
+const description =
+  'Notes and essays from John Kim on engineering, systems, and software development.'
+
 export const metadata: Metadata = {
   title: 'Writing',
-  description:
-    'Notes and essays from John Kim on engineering, systems, and software development.',
+  description,
+  alternates: {
+    canonical: '/writing',
+  },
+  openGraph: {
+    description,
+    images: [
+      {
+        alt: 'John Kim — Software Engineer',
+        height: 630,
+        url: '/opengraph-image',
+        width: 1200,
+      },
+    ],
+    locale: 'en_US',
+    siteName: 'John Kim',
+    title: 'Writing by John Kim',
+    type: 'website',
+    url: '/writing',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    description,
+    images: ['/opengraph-image'],
+    title: 'Writing by John Kim',
+  },
 }
 
 export default function WritingPage() {

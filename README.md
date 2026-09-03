@@ -69,4 +69,4 @@ There are no environment variables today. If one is needed later, add its name a
 
 Only variables prefixed `NEXT_PUBLIC_` can be used in browser code, and Next.js embeds their values in the client bundle at build time. They must never contain a secret. Keep keys, tokens, private URLs, and other sensitive values server-only and unprefixed.
 
-Once the site has its final domain, set `SITE_URL=https://your-domain.com` in the deployment environment. It enables absolute URLs in the sitemap and its reference from `robots.txt`; it is intentionally optional for local and preview deployments.
+Once the site has its final domain, set `SITE_URL=https://your-domain.com` in the deployment environment. It must be the HTTPS origin only—no path, query string, hash, or credentials. It enables absolute production URLs in metadata, the sitemap, and the sitemap reference from `robots.txt`; it is intentionally optional for local and preview deployments. Invalid or preview-only values fall back to the local metadata base and do not populate the sitemap or `robots.txt` sitemap reference.
