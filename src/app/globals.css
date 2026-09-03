@@ -2,18 +2,20 @@
 
 :root {
   /* Color */
-  --canvas: #f6f4ef;
-  --surface: #fcfbf8;
-  --ink: #181a1f;
-  --ink-muted: #5f6670;
-  --rule: #d9d7d0;
+  --canvas: #f4f0e8;
+  --surface: #fbf7ef;
+  --ink: #1d1b18;
+  --ink-muted: #5f5b54;
+  --rule: #d6cfc3;
   --accent: #1c4e80;
   --accent-hover: #11385f;
   --focus-ring: #2d6ba4;
+  --selection: #cddff0;
 
   /* Typography */
-  --font-display: var(--font-geist-sans);
-  --font-reading: var(--font-geist-sans);
+  --font-editorial: var(--font-newsreader);
+  --font-display: var(--font-editorial);
+  --font-reading: var(--font-editorial);
   --font-metadata: var(--font-geist-mono);
   --text-display: clamp(3.25rem, 8vw, 7.5rem);
   --text-title: clamp(2rem, 4vw, 3.5rem);
@@ -42,8 +44,6 @@
 
   /* Interaction */
   --motion-fast: 140ms;
-  --motion-standard: 220ms;
-  --motion-slow: 360ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -123,7 +123,7 @@ a:hover {
 }
 
 ::selection {
-  background: #cddff0;
+  background: var(--selection);
   color: var(--ink);
 }
 
@@ -193,12 +193,15 @@ a:hover {
 }
 
 .site-header__brand {
+  align-items: center;
   grid-area: brand;
   color: var(--ink);
+  display: inline-flex;
   font-family: var(--font-display), Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.03em;
+  min-height: 2.75rem;
   text-decoration: none;
 }
 
@@ -315,10 +318,12 @@ a:hover {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-display), Arial, sans-serif;
+  font-optical-sizing: auto;
   font-size: var(--text-title);
   font-weight: 540;
   letter-spacing: -0.06em;
   line-height: var(--leading-title);
+  text-wrap: balance;
 }
 
 .impact-highlight {
@@ -333,10 +338,12 @@ a:hover {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-display), Arial, sans-serif;
+  font-optical-sizing: auto;
   font-size: var(--text-heading);
   font-weight: 540;
   letter-spacing: -0.04em;
   line-height: var(--leading-title);
+  text-wrap: balance;
 }
 
 .impact-highlight__content p {
@@ -379,10 +386,12 @@ a:hover {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-display), Arial, sans-serif;
+  font-optical-sizing: auto;
   font-size: var(--text-display);
   font-weight: 520;
   letter-spacing: -0.075em;
   line-height: var(--leading-display);
+  text-wrap: balance;
 }
 
 .home-hero__lede,
@@ -393,6 +402,15 @@ a:hover {
   color: var(--ink-muted);
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.6;
+}
+
+.home-hero__lede,
+.writing-page__lede {
+  font-family: var(--font-editorial);
+  font-optical-sizing: auto;
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  line-height: 1.45;
+  text-wrap: pretty;
 }
 
 .home-hero__links {
@@ -436,10 +454,12 @@ a:hover {
 .writing-list h2 {
   margin: 0;
   font-family: var(--font-display), Arial, sans-serif;
+  font-optical-sizing: auto;
   font-size: var(--text-heading);
   font-weight: 540;
   letter-spacing: -0.04em;
   line-height: var(--leading-title);
+  text-wrap: balance;
 }
 
 .writing-preview__post > p:not(.metadata),
@@ -534,16 +554,30 @@ a:hover {
 
 .article-page > h1 {
   max-width: 15ch;
+  font-size: clamp(3.25rem, 7vw, 6.5rem);
+  text-wrap: pretty;
 }
 
 .article-page__body {
   display: grid;
   gap: var(--space-5);
-  max-width: var(--content-reading);
+  max-width: 40rem;
+  font-family: var(--font-editorial);
+  font-optical-sizing: auto;
+  font-size: 1.0625rem;
+  line-height: 1.72;
 }
 
 .article-page__body p {
   margin: 0;
+}
+
+.article-page__lede {
+  font-family: var(--font-editorial);
+  font-optical-sizing: auto;
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+  line-height: 1.45;
+  text-wrap: pretty;
 }
 
 .not-found-page,

@@ -257,6 +257,10 @@ Each post should make a concrete point, use your own voice, and include a clear 
 
 ## Stage 5 — Refine content and visual quality
 
+**Detailed checklist:** [Stage 5: Visual Refinement](STAGE_5_VISUAL_REFINEMENT.md)
+
+**Selected visual-direction plan:** [Direction 1: Editorial Type and Paper](STAGE_5_EDITORIAL_TYPE_AND_PAPER.md)
+
 **Goal:** Turn a functional draft into a deliberate, memorable site.
 
 **Work:**
