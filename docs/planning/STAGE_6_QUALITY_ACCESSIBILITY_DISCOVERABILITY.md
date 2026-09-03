@@ -236,7 +236,7 @@ Perform the following sections in order. Start with the release inventory and pr
 
 **Purpose:** Leave a concise, reproducible decision record for the hosted-preview and launch stages.
 
-**Status:** Complete locally on branch `codex/stage-6-quality-accessibility-discoverability`; remote push and PR creation are pending owner authorization and GitHub re-authentication.
+**Status:** Complete locally and submitted for review on branch `codex/stage-6-quality-accessibility-discoverability`.
 
 **Work**
 
@@ -252,7 +252,7 @@ Perform the following sections in order. Start with the release inventory and pr
 - The final local verification commands are `pnpm check`, `SITE_URL=https://example.com pnpm build`, and `git diff --check`. The production build includes Home, About, Writing, the published article, icon, social-image routes, robots, and sitemap with no build error.
 - Stage 7 handoff: select the final HTTPS domain and set it as `SITE_URL` only in the hosting production environment; inspect the preview in standalone Chrome/Chromium, Firefox, and on a physical phone; rerun Lighthouse against that preview; and keep preview indexing under the host's preview/noindex controls rather than changing production crawler rules.
 - No accepted product defect blocks the local release candidate. The only remaining limitations are the unavailable local standalone Chrome/Firefox/physical-device coverage and Lighthouse browser binary, all explicitly assigned to the hosted-preview pass.
-- The local commit is ready for review. The current GitHub CLI token for `JohnKim04` is invalid, and the remote push requires explicit confirmation that the configured GitHub remote is authorized for this repository. Re-authenticate with `gh auth login -h github.com`, then push this branch and open the PR without force-pushing or overwriting remote history.
+- The branch is pushed to `origin` and the review PR is open: [#3 Complete Stage 6 quality checks](https://github.com/JohnKim04/jk-personal-website/pull/3). Do not force-push or overwrite remote history; merge only after review.
 - The verified local candidate is the branch's `Complete Stage 6 quality checks` commit. Its working tree is clean after the final check/build run.
 
 **Done when**
