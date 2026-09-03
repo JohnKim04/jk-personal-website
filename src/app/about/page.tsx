@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import { PageContainer, SectionHeading } from '@/components/editorial'
 import { experienceTimeline } from '@/content/experience'
-import { siteIdentity } from '@/content/site'
+import { aboutContent, siteIdentity } from '@/content/site'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -16,10 +16,11 @@ export default function AboutPage() {
       <section className="about-page__intro" aria-labelledby="about-title">
         <p className="eyebrow">About</p>
         <h1 id="about-title">{siteIdentity.name}</h1>
-        <p>
-          A personal narrative is intentionally deferred until John has written
-          and approved it in his own voice.
-        </p>
+        <div className="about-page__narrative">
+          {aboutContent.narrative.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
       </section>
 
       <div className="about-page__grid">

@@ -17,24 +17,26 @@ export default function WritingPage() {
         <p className="eyebrow">Writing</p>
         <h1 id="writing-title">Notes on building, systems, and AI.</h1>
         <p className="writing-page__lede">
-          This will stay small and intentional. Published writing will be
-          original, specific, and reviewed before it appears here.
+          A small collection of original notes on engineering, systems, and
+          software development.
         </p>
       </section>
 
-      <ol className="writing-list">
-        {writingPosts.map((post) => (
-          <li key={post.slug}>
-            <article>
-              <p className="metadata">{getWritingMeta(post)}</p>
-              <h2>
-                <Link href={`/writing/${post.slug}`}>{post.title}</Link>
-              </h2>
-              <p>{post.description}</p>
-            </article>
-          </li>
-        ))}
-      </ol>
+      {writingPosts.length > 0 ? (
+        <ol className="writing-list">
+          {writingPosts.map((post) => (
+            <li key={post.slug}>
+              <article>
+                <p className="metadata">{getWritingMeta(post)}</p>
+                <h2>
+                  <Link href={`/writing/${post.slug}`}>{post.title}</Link>
+                </h2>
+                <p>{post.description}</p>
+              </article>
+            </li>
+          ))}
+        </ol>
+      ) : null}
     </PageContainer>
   )
 }

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 
 import { PageContainer } from '@/components/editorial'
+import { LinkedInIcon } from '@/components/linkedin-icon'
 import { linkedInLink, professionalLinks, siteIdentity } from '@/content/site'
 
 const navigation = [
@@ -48,12 +49,13 @@ function SiteHeader() {
         </nav>
 
         <a
-          className="site-header__action"
+          className="site-header__action linkedin-link"
           href={linkedInLink.href}
           target="_blank"
           rel="noreferrer"
         >
-          LinkedIn <span aria-hidden="true">↗</span>
+          <LinkedInIcon className="linkedin-link__icon" />
+          LinkedIn
         </a>
       </PageContainer>
     </header>
@@ -73,12 +75,21 @@ function SiteFooter() {
             {professionalLinks.map((link) => (
               <li key={link.href}>
                 <a
+                  className={
+                    link.href === linkedInLink.href
+                      ? 'linkedin-link'
+                      : undefined
+                  }
                   href={link.href}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                 >
+                  {link.href === linkedInLink.href ? (
+                    <LinkedInIcon className="linkedin-link__icon" />
+                  ) : null}
                   {link.label}
-                  {link.href.startsWith('http') ? (
+                  {link.href.startsWith('http') &&
+                  link.href !== linkedInLink.href ? (
                     <span aria-hidden="true"> ↗</span>
                   ) : null}
                 </a>

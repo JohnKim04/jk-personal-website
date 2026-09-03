@@ -219,11 +219,14 @@ a:hover {
 
 .site-header__nav a,
 .site-header__action {
+  align-items: center;
   color: var(--ink-muted);
+  display: inline-flex;
   font-family: var(--font-metadata), monospace;
   font-size: var(--text-metadata);
   font-weight: 500;
   letter-spacing: 0.04em;
+  min-height: 2.75rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -236,6 +239,18 @@ a:hover {
 .site-header__action {
   grid-area: action;
   justify-self: end;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.linkedin-link__icon {
+  flex: none;
+  width: 1em;
+  height: 1em;
 }
 
 .site-main {
@@ -259,11 +274,14 @@ a:hover {
 }
 
 .site-footer__links a {
+  align-items: center;
   color: var(--ink-muted);
+  display: inline-flex;
   font-family: var(--font-metadata), monospace;
   font-size: var(--text-metadata);
   font-weight: 500;
   letter-spacing: 0.04em;
+  min-height: 2.75rem;
   text-transform: uppercase;
 }
 
@@ -384,22 +402,6 @@ a:hover {
   font-size: 0.95rem;
 }
 
-.headshot-placeholder {
-  display: grid;
-  align-content: end;
-  gap: var(--space-3);
-  min-height: 14rem;
-  padding: var(--space-5);
-  border: 1px solid var(--rule);
-  background: var(--surface);
-}
-
-.headshot-placeholder > p:last-child {
-  max-width: 24rem;
-  margin: 0;
-  color: var(--ink-muted);
-}
-
 .home-section {
   display: grid;
   gap: var(--space-7);
@@ -461,10 +463,15 @@ a:hover {
   gap: var(--space-5);
 }
 
-.about-page__intro > p:last-child {
+.about-page__narrative {
+  display: grid;
+  gap: var(--space-4);
   max-width: 38rem;
-  margin: 0;
   color: var(--ink-muted);
+}
+
+.about-page__narrative p {
+  margin: 0;
 }
 
 .about-page__grid {
@@ -527,19 +534,6 @@ a:hover {
 
 .article-page > h1 {
   max-width: 15ch;
-}
-
-.article-page__placeholder {
-  display: grid;
-  gap: var(--space-3);
-  padding: var(--space-5);
-  border-left: 2px solid var(--accent);
-}
-
-.article-page__placeholder p {
-  max-width: 38rem;
-  margin: 0;
-  color: var(--ink-muted);
 }
 
 .article-page__body {
@@ -613,6 +607,38 @@ a:hover {
   color: var(--accent);
 }
 
+@media (max-width: 47.99rem) {
+  .site-header__inner {
+    column-gap: var(--space-3);
+    row-gap: var(--space-2);
+  }
+
+  .site-header__nav ul {
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .home-hero {
+    gap: var(--space-6);
+    padding-block: clamp(3.5rem, 16vw, 5rem) var(--space-8);
+  }
+
+  .home-section {
+    gap: var(--space-6);
+    padding-block: var(--space-8);
+  }
+
+  .about-page,
+  .writing-page,
+  .article-page {
+    gap: var(--space-7);
+    padding-block: clamp(4.5rem, 16vw, 6rem);
+  }
+
+  .about-page__grid {
+    gap: var(--space-7);
+  }
+}
+
 @media (min-width: 48rem) {
   .site-header__inner {
     grid-template-areas: 'brand nav action';
@@ -631,16 +657,6 @@ a:hover {
 
   .site-footer__copyright {
     justify-self: end;
-  }
-
-  .home-hero {
-    grid-template-columns: minmax(0, 2fr) minmax(15rem, 1fr);
-    align-items: stretch;
-    gap: var(--space-9);
-  }
-
-  .headshot-placeholder {
-    min-height: 100%;
   }
 
   .impact-list .impact-highlight {
