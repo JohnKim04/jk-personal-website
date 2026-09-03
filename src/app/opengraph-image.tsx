@@ -9,8 +9,8 @@ export default function OpenGraphImage() {
     <div
       style={{
         alignItems: 'stretch',
-        background: '#f6f4ef',
-        color: '#171717',
+        background: '#f4f0e8',
+        color: '#1d1b18',
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
@@ -21,7 +21,7 @@ export default function OpenGraphImage() {
     >
       <div
         style={{
-          color: '#315ed5',
+          color: '#1c4e80',
           display: 'flex',
           fontSize: 22,
           fontWeight: 700,
@@ -42,14 +42,14 @@ export default function OpenGraphImage() {
         >
           John Kim
         </div>
-        <div style={{ color: '#565656', display: 'flex', fontSize: 30 }}>
+        <div style={{ color: '#5f5b54', display: 'flex', fontSize: 30 }}>
           Infrastructure, developer tooling, and checkout systems.
         </div>
       </div>
       <div
         style={{
           alignItems: 'center',
-          borderTop: '2px solid #171717',
+          borderTop: '2px solid #1d1b18',
           display: 'flex',
           fontSize: 24,
           justifyContent: 'space-between',
@@ -57,7 +57,7 @@ export default function OpenGraphImage() {
         }}
       >
         <span>Systems with clear outcomes.</span>
-        <span style={{ color: '#315ed5', fontWeight: 700 }}>JK</span>
+        <span style={{ color: '#1c4e80', fontWeight: 700 }}>JK</span>
       </div>
     </div>,
     size,

@@ -37,11 +37,12 @@ Before committing a meaningful change, run `pnpm check` and `pnpm build`.
 src/app/            App Router pages, layouts, and global styles
 public/             Reviewed public assets only
 source-material/    Private inputs such as the original resume (Git-ignored)
-PROJECT_PLAN.md     Product and content roadmap
-STAGE_3_TECHNICAL_FOUNDATION.md  Technical-foundation checklist
+docs/planning/      Product roadmap and stage checklists
 ```
 
 Future reusable UI belongs in `src/components/`; structured site and writing data belongs in `src/content/`. Keep facts and copy separate from page layout wherever practical.
+
+The primary roadmap is [docs/planning/PROJECT_PLAN.md](docs/planning/PROJECT_PLAN.md). Stage-specific plans live alongside it.
 
 ## Content workflow
 
