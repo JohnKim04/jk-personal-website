@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist_Mono, Newsreader } from 'next/font/google'
 
 import { SiteShell } from '@/components/site-shell'
+import { getMetadataBase } from '@/lib/site-url'
 
 import './globals.css'
 
@@ -20,7 +21,7 @@ const newsreader = Newsreader({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: getMetadataBase(),
   title: {
     default: 'John Kim — Software Engineer',
     template: '%s — John Kim',
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'John Kim',
     type: 'website',
+    url: '/',
   },
   twitter: {
     card: 'summary_large_image',

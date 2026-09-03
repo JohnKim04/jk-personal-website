@@ -18,12 +18,35 @@ export async function generateMetadata({
   const post = getWritingPost(slug)
 
   if (!post) {
-    return { title: 'Writing' }
+    return {
+      title: 'Page not found',
+      robots: {
+        follow: false,
+        index: false,
+      },
+    }
   }
 
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/writing/${post.slug}`,
+    },
+    openGraph: {
+      description: post.description,
+      locale: 'en_US',
+      publishedTime: `${post.publishedAt}T00:00:00.000Z`,
+      siteName: 'John Kim',
+      title: post.title,
+      type: 'article',
+      url: `/writing/${post.slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      description: post.description,
+      title: post.title,
+    },
   }
 }
 

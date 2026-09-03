@@ -4,10 +4,37 @@ import { PageContainer, SectionHeading } from '@/components/editorial'
 import { experienceTimeline } from '@/content/experience'
 import { aboutContent, siteIdentity } from '@/content/site'
 
+const description =
+  'Background and experience of John Kim, a software engineer based in San Francisco.'
+
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'Background and experience of John Kim, a software engineer based in San Francisco.',
+  description,
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    description,
+    images: [
+      {
+        alt: 'John Kim — Software Engineer',
+        height: 630,
+        url: '/opengraph-image',
+        width: 1200,
+      },
+    ],
+    locale: 'en_US',
+    siteName: 'John Kim',
+    title: 'About John Kim',
+    type: 'website',
+    url: '/about',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    description,
+    images: ['/opengraph-image'],
+    title: 'About John Kim',
+  },
 }
 
 export default function AboutPage() {

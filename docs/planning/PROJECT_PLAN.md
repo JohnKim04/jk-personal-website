@@ -277,6 +277,8 @@ Each post should make a concrete point, use your own voice, and include a clear 
 
 ## Stage 6 — Quality, accessibility, and discoverability
 
+**Detailed checklist:** [Stage 6: Quality, Accessibility, and Discoverability](STAGE_6_QUALITY_ACCESSIBILITY_DISCOVERABILITY.md)
+
 **Goal:** Make the site trustworthy in real-world use.
 
 **Work:**
