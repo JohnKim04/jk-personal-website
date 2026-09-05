@@ -42,11 +42,7 @@ export default function WritingPage() {
     <PageContainer className="writing-page" size="reading">
       <section aria-labelledby="writing-title">
         <p className="eyebrow">Writing</p>
-        <h1 id="writing-title">Notes on building, systems, and AI.</h1>
-        <p className="writing-page__lede">
-          A small collection of original notes on engineering, systems, and
-          software development.
-        </p>
+        <h1 id="writing-title">Some notes</h1>
       </section>
 
       {writingPosts.length > 0 ? (
