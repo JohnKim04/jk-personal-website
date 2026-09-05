@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const featuredPost = writingPosts[0]
+  const recentPosts = writingPosts.slice(0, 3)
 
   return (
     <div className="home-page">
@@ -76,17 +76,31 @@ export default function Home() {
         </div>
       </PageContainer>
 
-      {featuredPost ? (
+      {recentPosts.length > 0 ? (
         <PageContainer className="home-section home-section--writing">
           <EditorialRule />
-          <div className="writing-preview">
-            <SectionHeading eyebrow="Writing" title={featuredPost.title} />
-            <article className="writing-preview__post">
-              <p className="metadata">{getWritingMeta(featuredPost)}</p>
-              <p>{featuredPost.description}</p>
-              <Link href={`/writing/${featuredPost.slug}`}>Read the note</Link>
-            </article>
-          </div>
+          <section className="home-writing">
+            <SectionHeading eyebrow="Writing" title="Recent notes" />
+            <ol className="home-writing__list">
+              {recentPosts.map((post) => (
+                <li key={post.slug}>
+                  <article>
+                    <p className="metadata">{getWritingMeta(post)}</p>
+                    <div>
+                      <h3>
+                        <Link href={`/writing/${post.slug}`}>{post.title}</Link>
+                      </h3>
+                      <p>{post.description}</p>
+                      <Link href={`/writing/${post.slug}`}>Read the note</Link>
+                    </div>
+                  </article>
+                </li>
+              ))}
+            </ol>
+            <Link className="home-writing__all" href="/writing">
+              View all writing
+            </Link>
+          </section>
         </PageContainer>
       ) : null}
     </div>
