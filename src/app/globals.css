@@ -420,6 +420,25 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.home-hero__portrait,
+.about-page__education-portrait {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.home-hero__portrait {
+  width: min(100%, 25rem);
+}
+
+.home-hero__portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 53% 68%;
+  border: 1px solid var(--rule);
+}
+
 .home-section {
   display: grid;
   gap: var(--space-7);
@@ -508,6 +527,23 @@ a:hover {
 .about-page__detail {
   margin: 0;
   color: var(--ink-muted);
+}
+
+.about-page__education-portrait {
+  width: min(100%, 22rem);
+  margin-top: var(--space-3);
+}
+
+.about-page__education-portrait img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--rule);
+}
+
+.about-page__education-portrait figcaption {
+  margin: 0;
 }
 
 .experience-timeline,
@@ -656,6 +692,10 @@ a:hover {
     padding-block: clamp(3.5rem, 16vw, 5rem) var(--space-8);
   }
 
+  .home-hero__portrait {
+    width: min(100%, 22rem);
+  }
+
   .home-section {
     gap: var(--space-6);
     padding-block: var(--space-8);
@@ -701,6 +741,16 @@ a:hover {
 
   .impact-list .impact-highlight .metadata-row {
     grid-column: 2;
+  }
+
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.64fr);
+    align-items: end;
+    column-gap: clamp(var(--space-7), 8vw, var(--space-10));
+  }
+
+  .home-hero__portrait {
+    justify-self: end;
   }
 
   .about-page__grid {

@@ -49,6 +49,12 @@ export default function Home() {
             </a>
           </div>
         </section>
+        <figure className="home-hero__portrait">
+          <img
+            src="/images/john-headshot.webp"
+            alt="John Kim in front of the Seattle waterfront."
+          />
+        </figure>
       </PageContainer>
 
       <PageContainer className="home-section" id="selected-impact">
