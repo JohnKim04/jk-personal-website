@@ -59,8 +59,8 @@ export default function Home() {
 
       <PageContainer className="home-section" id="selected-impact">
         <SectionHeading
-          eyebrow="Selected impact"
-          title="Systems with clear outcomes."
+          eyebrow="Selected work"
+          title="A few things I’ve worked on."
         />
         <div className="impact-list">
           {selectedImpact.map((highlight) => (
