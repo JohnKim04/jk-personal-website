@@ -51,7 +51,7 @@ export default function AboutPage() {
       </section>
 
       <div className="about-page__grid">
-        <section>
+        <section className="about-page__education">
           <SectionHeading
             eyebrow="Education"
             title={siteIdentity.education.school}
@@ -61,6 +61,15 @@ export default function AboutPage() {
           <p className="about-page__detail">
             {siteIdentity.education.graduation} / {siteIdentity.education.gpa}
           </p>
+          <figure className="about-page__education-portrait">
+            <img
+              src="/images/john-full-grad.webp"
+              alt="John Kim wearing a University of California, Santa Barbara graduation stole."
+            />
+            <figcaption className="metadata">
+              UC Santa Barbara / Class of 2026
+            </figcaption>
+          </figure>
         </section>
 
         <section>
