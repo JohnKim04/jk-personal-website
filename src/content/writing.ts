@@ -10,6 +10,26 @@ export type WritingPost = {
 // Keep drafts and unapproved AI-assisted notes outside the public repository.
 export const writingPosts: WritingPost[] = [
   {
+    slug: 'junior-engineers-can-own-more-than-tickets-now',
+    title: 'Junior engineers are owning more than tickets',
+    description:
+      'AI agents are changing how quickly new engineers can ramp up, but ownership and judgment still belong to the person doing the work.',
+    publishedAt: '2026-09-05',
+    readingTime: '6 min read',
+    body: [
+      'For a long time, the default path for a junior engineer was fairly clear. Join a new team, spend time learning the codebase, and pick up carefully scoped tickets while you build context. That is still a sensible way to learn. But I think the shape of the job is starting to change.',
+      'I recently joined Coinbase, and I was able to start contributing much faster than I expected. On my first day, I could use agents to trace code paths, find relevant files, understand unfamiliar concepts, and get to a point where I could open PRs and help solve issues. The work still needed review and the surrounding context still mattered, but the time between joining and becoming useful was much shorter.',
+      'That first week was not only about moving faster through a backlog. It gave me enough room to understand where the team had gaps. Within my first two weeks, I was scoping a project of my own rather than only taking the next assigned task. I was also working across anomaly detection, cloud-cost budget tracking and allocation, and smaller UI fixes at the same time.',
+      'That is the part that feels different. Agents do not just make an individual ticket faster. They make it more practical for a newer engineer to own a problem end to end: learn the system, investigate the problem, propose a shape for the work, break it into pieces, and keep moving while separate threads of work are explored in parallel.',
+      'I do not mean that an agent replaces the engineer. The useful model for me is closer to being a manager of a small set of agents. I can ask one to investigate an unfamiliar area of the codebase, another to trace an issue, and another to draft an implementation approach. While those tasks run, I can keep talking to teammates, make product decisions, or work on a different part of the project.',
+      'The output is not automatically correct just because it arrived quickly. I still need to decide which questions are worth asking, give each task enough context, read the code that comes back, test the result, and understand the tradeoffs before I merge anything. The job is less about producing every line myself and more about staying responsible for the whole system of work.',
+      'The new bottleneck is human context. It is easy to start several useful things at once and then lose track of why a decision was made, which assumption an agent used, or what needs to happen next. The more parallel work I run, the more deliberate I have to be about keeping one coherent picture of the project.',
+      'Linear and Markdown files help me with that. I use them to keep a clear record of active work, current decisions, open questions, and next steps. They are not glamorous tools, but they let me return to a workstream without rebuilding all of the context from memory. They also make it easier to hand a focused, well-defined task to an agent instead of hoping it can infer everything that matters.',
+      'There will still be times when a well-scoped ticket is exactly the right work for a junior engineer. Tickets are how teams make progress, and focused work is one of the best ways to learn a system. But I do not think a junior engineer has to wait as long to take real ownership anymore.',
+      'AI raises the ceiling for how much a newer engineer can own early on. It also raises the bar for judgment. The opportunity is not to close more tickets with less thought. It is to become useful across a larger surface area while keeping the quality bar high enough that the extra velocity is actually valuable.',
+    ],
+  },
+  {
     slug: 'keep-testing-the-tools-you-use',
     title: 'Keep testing the tools you use',
     description:
