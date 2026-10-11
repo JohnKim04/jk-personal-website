@@ -23,9 +23,11 @@ export const linkedInLink = {
   href: 'https://www.linkedin.com/in/johnkim00/',
 } as const
 
+export const githubUsername = 'JohnKim04'
+
 export const githubLink = {
   label: 'GitHub',
-  href: 'https://github.com/JohnKim04',
+  href: `https://github.com/${githubUsername}`,
 } as const
 
 export const professionalLinks = [emailLink, linkedInLink, githubLink] as const
