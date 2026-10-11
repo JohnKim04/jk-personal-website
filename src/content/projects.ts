@@ -15,11 +15,6 @@ export type Project = {
   metadata: string[]
   href?: string
   screenshots: ProjectScreenshot[]
-  /** Shown in a phone frame when there are no screenshots yet. */
-  placeholder?: {
-    iconSrc: string
-    note: string
-  }
 }
 
 export const projects: Project[] = [
@@ -62,10 +57,25 @@ export const projects: Project[] = [
       'A native journal for recording what happened, checking in on how it turned out, and reviewing patterns over time without claiming cause and effect.',
     metadata: ['Swift', 'SwiftUI', 'SwiftData', 'Swift Charts'],
     href: 'https://github.com/JohnKim04/Foresight-iOS',
-    screenshots: [],
-    placeholder: {
-      iconSrc: '/images/projects/foresight-icon.webp',
-      note: 'Screenshots coming soon',
-    },
+    screenshots: [
+      {
+        src: '/images/projects/foresight-journal.webp',
+        alt: 'Foresight journal timeline with recent logs and their check-in status.',
+        width: 603,
+        height: 1311,
+      },
+      {
+        src: '/images/projects/foresight-check-in.webp',
+        alt: 'The Check In tab listing logs that are ready for a reflection.',
+        width: 603,
+        height: 1311,
+      },
+      {
+        src: '/images/projects/foresight-patterns.webp',
+        alt: 'The Patterns tab showing outcome evidence for a workout category.',
+        width: 603,
+        height: 1311,
+      },
+    ],
   },
 ]

@@ -38,19 +38,6 @@ export function ProjectShowcase({ project }: { project: Project }) {
             />
           </li>
         ))}
-        {project.screenshots.length === 0 && project.placeholder ? (
-          <li className="phone-frame phone-frame--placeholder">
-            <img
-              src={project.placeholder.iconSrc}
-              alt=""
-              width={256}
-              height={256}
-              loading="lazy"
-              decoding="async"
-            />
-            <p className="metadata">{project.placeholder.note}</p>
-          </li>
-        ) : null}
       </ul>
     </article>
   )
