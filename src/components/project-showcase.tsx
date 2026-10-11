@@ -32,9 +32,6 @@ export function ProjectShowcase({ project }: { project: Project }) {
               height={screenshot.height}
               loading="lazy"
               decoding="async"
-              className={
-                screenshot.pixelArt ? 'phone-frame__pixel-art' : undefined
-              }
             />
           </li>
         ))}

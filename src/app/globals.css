@@ -551,7 +551,7 @@ a:hover {
 
 .project__screens {
   display: grid;
-  grid-auto-columns: minmax(9rem, 12rem);
+  grid-auto-columns: minmax(8.5rem, 11rem);
   grid-auto-flow: column;
   gap: var(--space-4);
   padding: 0 0 var(--space-2);
@@ -577,10 +577,6 @@ a:hover {
   border-radius: 1.3rem;
   object-fit: cover;
   object-position: top;
-}
-
-.phone-frame__pixel-art {
-  image-rendering: pixelated;
 }
 
 .contribution-graph {
