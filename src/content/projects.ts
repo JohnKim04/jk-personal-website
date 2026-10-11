@@ -37,8 +37,8 @@ export const projects: Project[] = [
         height: 1311,
       },
       {
-        src: '/images/projects/pocket-railway-engine.webp',
-        alt: 'The engine room, with the firebox lit and a heap of mined coal ready to shovel.',
+        src: '/images/projects/pocket-railway-general-store.webp',
+        alt: 'Inside the Millbrook general store, with the shopkeeper behind the counter and goods on the shelves.',
         width: 603,
         height: 1311,
       },
