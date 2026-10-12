@@ -37,8 +37,8 @@ export const projects: Project[] = [
         height: 1311,
       },
       {
-        src: '/images/projects/pocket-railway-general-store.webp',
-        alt: 'Inside the Millbrook general store, with the shopkeeper behind the counter and goods on the shelves.',
+        src: '/images/projects/pocket-railway-ship-chandler.webp',
+        alt: 'Inside the Saltwick ship chandler, with the shopkeeper at the counter among ship's lamps and nautical goods.',
         width: 603,
         height: 1311,
       },
