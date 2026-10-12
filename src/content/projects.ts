@@ -38,7 +38,7 @@ export const projects: Project[] = [
       },
       {
         src: '/images/projects/pocket-railway-ship-chandler.webp',
-        alt: 'Inside the Saltwick ship chandler, with the shopkeeper at the counter among ship's lamps and nautical goods.',
+        alt: 'Inside the Saltwick ship chandler, with the shopkeeper at the counter among ship’s lamps and nautical goods.',
         width: 603,
         height: 1311,
       },
