@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import { ContributionGraph } from '@/components/contribution-graph'
 import {
   EditorialRule,
   ImpactHighlight,
@@ -8,14 +9,20 @@ import {
   SectionHeading,
 } from '@/components/editorial'
 import { LinkedInIcon } from '@/components/linkedin-icon'
+import { ProjectShowcase } from '@/components/project-showcase'
 import { selectedImpact } from '@/content/experience'
+import { projects } from '@/content/projects'
 import {
   emailLink,
+  githubUsername,
   homepageContent,
   linkedInLink,
   siteIdentity,
 } from '@/content/site'
 import { getWritingMeta, writingPosts } from '@/content/writing'
+
+// Refresh the GitHub contribution graph once a day.
+export const revalidate = 86400
 
 export const metadata: Metadata = {
   alternates: {
@@ -38,6 +45,7 @@ export default function Home() {
           <div className="home-hero__links">
             <a href={emailLink.href}>Email John</a>
             <a href="#selected-impact">Selected impact</a>
+            <a href="#projects">Projects</a>
             <a
               className="linkedin-link"
               href={linkedInLink.href}
@@ -74,6 +82,26 @@ export default function Home() {
             </ImpactHighlight>
           ))}
         </div>
+      </PageContainer>
+
+      <PageContainer className="home-section" id="projects">
+        <SectionHeading
+          eyebrow="Projects"
+          title="What I’m building on the side."
+        />
+        <div className="project-list">
+          {projects.map((project) => (
+            <ProjectShowcase key={project.name} project={project} />
+          ))}
+        </div>
+      </PageContainer>
+
+      <PageContainer
+        className="home-section home-section--activity"
+        id="activity"
+      >
+        <SectionHeading eyebrow="Activity" title="A year on GitHub." />
+        <ContributionGraph username={githubUsername} />
       </PageContainer>
 
       {recentPosts.length > 0 ? (
